@@ -1,8 +1,3 @@
-# -*- coding:utf-8 -*-
-# @time :2020.02.09
-# @IDE : pycharm
-# @author :lxztju
-# @github : https://github.com/lxztju
 import numpy as np
 
 def adjust_learning_rate_step(optimizer, learning_rate_base, gamma, epoch, step_index, iteration, epoch_size):
