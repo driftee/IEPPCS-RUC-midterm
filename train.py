@@ -93,13 +93,14 @@ for iteration in range(start_iter, max_iter):
     train_correct = (prediction == labels).sum()
     train_acc = (train_correct.float()) / batch_size
 
-    if train_acc >= best_acc:
-        best_acc = train_acc
-        save_name = "best.pth"
-    else:
-        save_name = 'epoch_{}.pth'.format(epoch)
+
     if iteration % epoch_size == 0:
         if epoch % 5 == 0 and epoch > 0:
+            if train_acc >= best_acc:
+                best_acc = train_acc
+                save_name = "best.pth"
+            else:
+                save_name = 'epoch_{}.pth'.format(epoch)
             if len(cfg.USING_GPU) > 1:
                 checkpoint = {'model': model.module,
                             'model_state_dict': model.module.state_dict(),

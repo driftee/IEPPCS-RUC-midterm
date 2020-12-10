@@ -32,7 +32,6 @@ class RandomRotate(object):
 def get_transform(input_size = INPUT_SIZE, imgset = 'train'):
     if 'train' == imgset:
         return transforms.Compose([
-            transforms.RandomCrop(input_size),
             transforms.RandomVerticalFlip(),
             transforms.RandomHorizontalFlip(),
             RandomRotate(15, 0.3),
