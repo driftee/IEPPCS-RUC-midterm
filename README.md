@@ -10,7 +10,7 @@
 
 * 数据集
 
-  * 点击[这里](https://www.baidu.com)下载我们的训练集(提取码);
+  * 点击[这里](https://pan.baidu.com/s/14Y1lkGotPS04x7upHmM3Xg)下载我们的训练集(提取码`rucs`);
   * 将训练集下的三个文件夹`train`,`test`和`extra`放入`dataset`目录下.
 
 * 训练
