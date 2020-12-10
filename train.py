@@ -94,6 +94,7 @@ for iteration in range(start_iter, max_iter):
     train_acc = (train_correct.float()) / batch_size
 
     if train_acc >= best_acc:
+        best_acc = train_acc
         save_name = "best.pth"
     else:
         save_name = 'epoch_{}.pth'.format(epoch)

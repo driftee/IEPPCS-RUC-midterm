@@ -22,7 +22,7 @@ def load_checkpoint(filepath):
 
 
 res_path = 'dataset/result'
-
+os.makedirs(res_path, exist_ok = True)
 def predict_on_extra(model, path, class_dict):
     if torch.cuda.is_available():
         model.cuda()
